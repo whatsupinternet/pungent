@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<link rel="stylesheet" type="text/css" href="index.css" />
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
@@ -10,19 +9,19 @@
 
 <style type="text/css">
 	html{
-		font-size: x-large;
+		width: 400px;
+		margin-left: auto;
+		margin-right:auto;
+		margin-top: 10%;
+		text-align: center;
+		font-size: small;
+		font-family: 'Source Sans Pro';
 	}
 	input{
 		font-size: large;
 		text-align: center;
 		font-family: serif;
-/* 		border:none; */
 		font-weight: 300;
-	}
-	#in{
-		font-family: 'Source Sans Pro', sans-serif;
-		text-transform: lowercase;
-		width:200px;
 	}
 	#button{
 		width:70px;
@@ -31,7 +30,6 @@
 		margin-top:10px;
 		font-size: large;
 		font-family: 'Source Sans Pro', sans-serif;
-		width:200px;
 		text-align: center;
 		margin-left:3px;
 	}
@@ -50,23 +48,29 @@
 
 <div id="out">goy story</div>
 
+
 <script src="jquery.js"></script>
 
 <script type="text/javascript">
 
 var dict = {};
-$.get( "dict.txt", function( txt ) {
+$.get( "dict.txt",
+	function( txt ) {
     var words = txt.split( "\n" );
     for ( var i = 0; i < words.length; i++ ) {
         dict[ words[i] ] = true;
     }
-});
+	}
+);
 function inserter(o, n, p){
-	return o.slice(0,p) + n + o.slice(p); }
+	return o.slice(0,p) + n + o.slice(p);
+}
 function replacer(o, n, p){
-	return o.slice(0,p) + n + o.slice(p+1); }
+	return o.slice(0,p) + n + o.slice(p+1);
+}
 function deleter(o, p){
-	return o.slice(0,p) + o.slice(p+1); }
+	return o.slice(0,p) + o.slice(p+1);
+}
 function shuffle(o){ //v1.0
     for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
     return o;
@@ -74,32 +78,22 @@ function shuffle(o){ //v1.0
 
 var letters = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'];
 
-
 window.onload = document.getElementById('button').onclick = function () {
 	var name = document.getElementById('in').value.toLowerCase()
-
 	name = name.replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()]/g,"")
-
 	var namearray = name.split(" ");
-
 	var words = [];
-
 	for (var i=0; i<namearray.length; i++){
 			if (namearray[i] != "the"
 				&& namearray[i] != "and"
 				&& namearray[i].length > 2){
 				words.push(namearray[i]);
 			}
-	  	}
-
+  	}
   	var word = shuffle(words)[0];
-
   	var maxIter = 2*namearray.length;
-
   	while(maxIter > 0){
-
 	  	var poss = [];
-
 	  	for (var i=0; i<letters.length; i++){
 		  	for (var j=0; j<word.length-1; j++){
 			  	var a = inserter(word, letters[i], j);
@@ -110,20 +104,14 @@ window.onload = document.getElementById('button').onclick = function () {
 			  	if (dict[c] && c != word){ poss.push(c); }
 		  	}
 	  	}
-
 	  	maxIter = maxIter - 1;
-
 	  	if (poss.length > 0){
 		  	shuffle(poss);
 		  	var n = name.replace(word,poss[0]);
 		  	$('#out').html(n);
 		  	return;
 	  	}
-
   	}
-
-
-
 }
 
 </script>
