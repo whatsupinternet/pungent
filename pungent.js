@@ -1,7 +1,7 @@
 !function ($) {
 
 var dict = {};
-$.get( "dict/dict.txt", function( txt ) {
+$.get( "dict.txt", function( txt ) {
     var words = txt.split( "\n" );
     for ( var i = 0; i < words.length; i++ ) {
         dict[ words[i] ] = true;
