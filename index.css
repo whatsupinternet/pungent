@@ -1,0 +1,472 @@
+/*    "Typewriter"
+    http://www.tumblr.com/theme/31260
+	
+	by Eric Hu
+	http://erichu.tumblr.com/
+	http://ericpaints.it/
+ */
+
+* { padding: 0; margin: 0; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; outline: none; }
+img { border: none; }
+ul li, ol li { list-style-type: none; }
+html { overflow-y: scroll; }
+
+header, footer, section, article, nav, aside {
+       display: block; }
+	
+body {
+	background: #fff;
+	font: 100% "Anonymous Pro", "Courier New", Courier, monospace;
+	color: #555; }
+	
+::-moz-selection { background: #cc0000; color: #fff; text-shadow: none; }
+::selection { background: #cc0000; color: #fff; text-shadow: none; }
+	
+#container {
+	width: 710px;
+	margin: 0 auto;
+	font: 14px "Anonymous Pro", "Courier New", Courier, monospace; }
+	
+header {
+	margin: 100px 0 25px 210px;
+	width:500px;
+	line-height: 20px; }
+	
+#description {
+	font: 14px "Anonymous Pro", "Courier New", Courier, monospace;
+	color: #777; }
+	
+nav {
+	margin: 0 0 100px 210px;
+	font: 14px "Anonymous Pro", "Courier New", Courier, monospace;
+	font-weight: 700; }
+	
+nav ul li {
+	list-style-type: none;
+	display: inline;
+	padding: 0 20px 0 0;
+	text-transform: lowercase; }
+	
+nav ul li a, nav ul li a:link, nav ul li a:visited {
+	text-decoration: none;
+	color: #cc0000; }
+	
+nav ul li a:hover {
+	border-bottom: 5px solid #cc0000; }
+
+h1 {
+	font: 20px "Anonymous Pro", Georgia, "Times New Roman", Times, serif;
+	font-weight: 700;
+	color: #000; }
+	
+h1 a, h1 a:link, h1 a:visited {
+	color: #000;
+	text-decoration: none; }
+	
+.post {
+	width: 500px;
+	float: right; }
+	
+.post p {
+	font: 14px "Anonymous Pro", "Courier New", Courier, monospace, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 20px;
+	margin: 0 0 10px 0;
+	color: #555; }
+	
+.post blockquote {
+	font: 14px "Anonymous Pro", "Courier New", Courier, monospace;
+	color: #888;
+	line-height: 20px;
+	margin: 0 0 0 10px;
+	padding: 0 0 0 10px;
+	border-left: 1px solid #ddd;	}
+	
+#content article .post ul {
+	margin: 10px 0 10px 25px;
+	line-height: 20px; }
+	
+#content article  .post ul li {
+	margin: 0 0 5px 0;
+	list-style-type: disc; }
+	
+article:hover .post blockquote {
+	color: #555; }
+	
+.post a, .post a:link, .post a:visited {
+	text-decoration: none;
+	color: #aaa; }
+	
+.post a:hover {
+	color: #000;
+	border: none;
+	text-decoration: underline; }
+
+.post:hover a, .post:hover a:link, .post:hover a:visited {
+	color: #cc0000; }
+	
+strong {
+	font: 14px "Anonymous Pro", "Courier New", Courier, monospace, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	color: #555; }
+	
+em {
+	font: italic 14px "Anonymous Pro", "Courier New", Courier, monospace, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-sytle: 400italic;
+	color: #555; }
+	
+.date a, .time a, .notes a, #header a, #header a:link {
+	text-decoration: none; }
+	
+article {
+	margin: 0 0 100px 0;
+	width: 710px; }
+	
+.article_details {
+	width: 160px;
+	float: left; }
+	
+article:hover .date a, .article_details:hover .date a:link, .article_details:hover .date a:visited {
+	color: #666; }
+	
+article:hover .time a, .article_details:hover .time a:link, .article_details:hover .time a:visited {
+	color: #555; }
+	
+article:hover .notes a, article:hover .notes a:link, article:hover .notes a:visited {
+	color: #444; }
+	
+article:hover .post p {
+	color: #333; }
+	
+.article_details:hover .notes a, .article_details:hover .notes a:link, .article_details:hover .notes a:visited {
+	color: #cc0000; }
+	
+.date, .time, .notes {
+	text-align: right;
+	font: 14px "Anonymous Pro", Georgia, "Times New Roman", Times, serif;
+	padding: 0 0 5px 0; }
+	
+.date a, .date a:link, .date a:visited {
+	color: #aaa; }
+	
+.time a, .time a:link, .time a:visited {
+	color: #aaa; }
+	.notes a, .notes a:link, .notes a:visited {
+	color: #aaa; }
+	
+.date a:hover, .time a:hover {
+	border-bottom: 1px dotted #aaa; }
+	
+.article_details .notes a:hover {
+	color: #cc0000;
+	border-bottom: 1px dotted #cc0000; }
+	
+#pages {
+	width: 710px;
+	padding: 0 0 0 210px;
+	font: bold 14px "Anonymous Pro", Georgia, "Times New Roman", Times, serif; }
+	
+#pages ul li {
+	display: inline;
+	margin: 0 5px 0 0; }
+	
+#pages ul li a, #pages ul li a:link, #pages ul li a:visited {
+	text-decoration: none;
+	color: #bbb;
+	padding: 3px 5px; }
+	
+#pages ul li a:hover {
+	border-bottom: 5px solid #cc0000; }
+	
+#pages ul li.active {
+	color: #666;
+	padding: 3px 7px; }
+	
+#pages:hover ul li a, #pages:hover ul li a:link, #pages:hover ul li a:visited {
+	color: #cc0000; }
+	
+#pages ul li a#older:hover, #pages ul li a#newer:hover {
+	border-bottom: 5px solid #cc0000; }
+	
+#pages:hover ul li.active  {
+	color: #333; }
+	
+footer {
+	width: 670px;
+	margin: 30px auto 30px auto;
+	padding: 120px 0 0 0;
+	text-align: right;
+	color: #aaa;
+	font: 14px "Anonymous Pro", Georgia, "Times New Roman", Times, serif; }
+	
+footer:hover a, footer:hover a:link, footer:hover a:visited {
+	color: #cc0000; }
+	
+footer a, footer a:link, footer a:visited {
+	text-decoration: none;
+	color: #aaa; }
+	
+footer a:hover {
+	border-bottom: 1px dotted #cc0000; }
+		
+	
+/*---------------- TEXT --------------- */
+	
+h2.article_title {
+	font: 14px "Anonymous Pro", "Courier New", Courier, monospace;
+	margin: 0 0 20px 0;
+	text-transform: uppercase; }
+	
+h2.article_title a, h2.article_title a:link, h2.article_title a:visited {
+	text-decoration: underline;
+	color: #555; }
+	
+h2.article_title a:hover {
+	border: none; }
+		
+.post:hover h2.article_title a, .post:hover h2.article_title a:link, .post:hover h2.article_title a:visited, #content article .post h2.article_title a:hover {
+	color: #000;
+	border: none; }
+	
+article:hover p a, article:hover p a:link, article:hover p a:visited {
+	color: #777; }
+	
+article:hover h2.article_title a, article:hover h2.article_title a:link, article:hover h2.article_title a:visited {
+	color: #333; }
+
+/*---------------- PHOTO --------------- */
+
+#content article .post .photo a, #content article .post .photo a:link, #content article .post .photo a:visited, .post:hover .photo a, .post:hover .photo a:link, .post:hover .photo a:visited {
+	border: none; }
+
+.photo_caption {
+	margin: 10px 0 0 0; }
+
+/*---------------- QUOTE --------------- */
+	
+.quote_text {
+	font: italic 20px "Anonymous Pro", Georgia, "Times New Roman", Times, serif;
+	color: #555;
+	line-height: 26px;
+	position: relative;
+	top: -3px; }
+	
+	article:hover .quote_text {
+	color: #333; }
+	
+.quote_source {
+	margin: 3px 0 0 0; }
+
+/*---------------- LINK --------------- */
+
+.link_title, .link_title:link, .link_title:visited {
+	font: 14px "Anonymous Pro", "Courier New", Courier, monospace;
+	text-decoration: underline;
+	text-transform: uppercase; 
+	color: #555; }
+
+.link_title:after {
+	content: " [link]";
+	font: 14px "Anonymous Pro", "Courier New", Courier, monospace;
+	text-transform: lowercase;
+	text-decoration: none;
+	color: #aaa; }
+	
+article:hover .link_title, article:hover .link_title:link, article:hover .link_title:visited {
+	color: #777; }
+	
+.post:hover .link_title, .post:hover .link_title:link, .post:hover .link_title:visited {
+	color: #cc0000; }
+
+/*---------------- CHAT --------------- */
+
+.chat_title {
+	font: 14px "Anonymous Pro", "Courier New", Courier, monospace, Georgia, "Times New Roman", Times, serif;
+	font-weight: 700;
+	color: #555;
+	margin: 0 0 10px 0; }
+	
+#content article .post ul.chat {
+	font: 14px "Anonymous Pro", "Courier New", Courier, monospace, Georgia, "Times New Roman", Times, serif;
+	color: #555;
+	margin: 0; }
+
+article:hover .chat, article:hover .chat_title {
+	color: #333; }
+	
+#content article .post ul.chat li {
+	margin: 0 0 10px 0;
+	padding: 5px;
+	list-style-type: none;
+	margin: 0; }
+
+.member1 {
+	background: #f8f8f8; }
+	
+.member2 {
+	background: #eee; }
+	
+.member3 {
+	background: #ddd; }
+	
+.member4 {
+	background: #ccc; }
+
+/*---------------- AUDIO --------------- */	
+
+.audio_details, .audio_caption {
+	font: 14px "Anonymous Pro", "Courier New", Courier, monospace, Georgia, "Times New Roman", Times, serif;
+	color: #555; }
+
+.audio_details {
+	margin: 0 0 15px 0; }
+	
+article:hover .audio_details {
+	color: #333; }
+
+.playcount, .external_audio_url, external_audio_url:link, external_audio_url:visited {
+	font: 14px "Anonymous Pro",  "Courier New", Courier, monospace; }
+	
+/*---------------- VIDEO --------------- */
+
+.video_caption {
+	margin: 10px 0 0 0; }
+	
+/*---------------- ASK --------------- */
+
+h3 {
+	font: 14px "Anonymous Pro", Georgia, "Times New Roman", Times, serif;
+	font-weight: 700;
+	line-height: 20px;
+	margin: -6px 0 10px 0;
+	color: #888; }
+	
+article:hover h3 {
+	color: #555; }
+	
+article:hover h3 a, article:hover h3 a:link, article:hover h3 a:visited {
+	color: #777; }
+	
+/*----------------- SEARCH ------------------*/
+
+#search_container {
+	float: left; }
+
+#search_toggle {
+	background: url(http://static.tumblr.com/anfpypi/2zeloitcn/search.png) no-repeat center left;
+	width: 16px;
+	height: 16px;
+	margin: 0 0 0 187px;
+	text-align: left;
+	text-indent: -99999px;
+	display: block;
+	cursor: pointer; }
+	
+footer:hover #search_toggle {
+	background: url(http://static.tumblr.com/anfpypi/23aloitdl/search_hover.png) no-repeat center left; }
+	
+#search_form {
+	width: 180px;
+	margin: -26px 0 10px 215px;
+	display: none; }
+	
+#search_query {
+	width: 180px;
+	border: none;
+	background: #ddd;
+	padding: 5px;
+	font: 14px "Anonymous Pro", "Courier New", Courier, monospace; }
+
+#searchresults {
+	margin: 30px 0 0 210px; }
+
+	
+/* ------------------- NOTES ---------------- */
+
+#notes {
+	font: 14px "Anonymous Pro", "Courier New", Courier, monospace;
+	margin: 100px  0 0 210px; }
+	
+#notes:hover .notes .note .action a, #notes:hover .notes .note .action a:link, #notes:hover .notes .note .action a:visited {
+	color: #cc0000; }
+	
+#notes:hover .notes .note .action a:hover {
+	color: #cc0000;
+	border-bottom: 1px solid #cc0000; }
+	
+ol.notes li.note {
+	text-align: left;
+	padding: 5px 5px 5px 0;
+	border-bottom: 1px solid #eee;
+	color: #555; }
+	
+ol.notes li.note:hover {
+	border-bottom: 1px solid #ccc; }
+	
+ol.notes li.note img.avatar {
+	margin: 0 10px -4px 0;
+	width: 16px;
+	height: 16px;
+	opacity: 0.75;
+	filter:alpha(opacity=75); }
+	
+#notes:hover .notes .note img.avatar {
+	opacity: 1;
+	filter:alpha(opacity=100); }
+	
+ol.notes li.note blockquote {
+	border-left: 1px dotted #ccc;
+	padding: 5px;
+	margin: 10px; }
+	
+#notes:hover ol.notes li.note blockquote {
+	border-left: 1px dotted #888; }
+	
+ol.notes li.note blockquote a, ol.notes li.note blockquote a:link, ol.notes li.note blockquote a:visited {
+	text-decoration: underline;
+	border: none; }
+	
+/* ---------------- TAGS ------------------ */
+
+.tags {
+	font: 14px "Anonymous Pro", Georgia, "Times New Roman", Times, serif;
+	text-align: right;
+	margin: 10px 0 0 0; }
+	
+.tags li {
+	padding: 0 0 5px 0; }
+	
+.tags a, .tags a:link, .tags a:visited {
+	color: #bbb;
+	text-decoration: none; }
+	
+article:hover .tags a, article:hover .tags a:link, article:hover .tags a:visited {
+	color: #888; }
+	
+.article_details:hover .tags a, .article_details:hover .tags a:link, .article_details:hover .tags a:visited {
+	color: #cc0000; }
+	
+.article_details:hover .tags a:hover {
+	color: #cc0000;
+	border-bottom: 1px dotted #cc0000; }
+	
+/* -------------- DISQUS --------------- */
+
+.disqus_comment_link {
+	text-align: right;
+	text-transform: lowercase;
+	font: 14px "Anonymous Pro", Georgia, "Times New Roman", Times, serif;
+	padding: 0 0 5px 0; }
+	
+.disqus_comment_link a, .disqus_comment_link a:link, .disqus_comment_link a:visited {
+	color: #aaa;
+	text-decoration: none; }
+	
+.disqus_comment_link a:hover {
+	color: #cc0000;
+	border-bottom: 1px dotted #cc0000; }
+	
+article:hover .disqus_comment_link a, article:hover .disqus_comment_link a:link, article:hover .disqus_comment_link a:visited {
+	color: #333; }
+	
+.article_details:hover .disqus_comment_link a, .article_details:hover .disqus_comment_link a:link, .article_details:hover .disqus_comment_link a:visited {
+	color: #cc0000; }
