@@ -38,7 +38,7 @@
 </style>
 
 </head>
-	
+
 <body>
 
 <panel>
@@ -58,7 +58,7 @@
 <script type="text/javascript">
 
 var dict = {};
-$.get( "dict/dict.txt", function( txt ) {
+$.get( "dict.txt", function( txt ) {
     var words = txt.split( "\n" );
     for ( var i = 0; i < words.length; i++ ) {
         dict[ words[i] ] = true;
@@ -80,29 +80,29 @@ var letters = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 
 
 window.onload = document.getElementById('button').onclick = function () {
 	var name = document.getElementById('in').value.toLowerCase()
-	
+
 	name = name.replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()]/g,"")
-	
+
 	var namearray = name.split(" ");
-	
+
 	var words = [];
-	
+
 	for (var i=0; i<namearray.length; i++){
-			if (namearray[i] != "the" 
-				&& namearray[i] != "and" 
+			if (namearray[i] != "the"
+				&& namearray[i] != "and"
 				&& namearray[i].length > 2){
 				words.push(namearray[i]);
-			}	
+			}
 	  	}
-	  	
+
   	var word = shuffle(words)[0];
-  	
+
   	var maxIter = 2*namearray.length;
-  	
+
   	while(maxIter > 0){
-  	
+
 	  	var poss = [];
-	
+
 	  	for (var i=0; i<letters.length; i++){
 		  	for (var j=0; j<word.length-1; j++){
 			  	var a = inserter(word, letters[i], j);
@@ -113,29 +113,22 @@ window.onload = document.getElementById('button').onclick = function () {
 			  	if (dict[c] && c != word){ poss.push(c); }
 		  	}
 	  	}
-	  	
+
 	  	maxIter = maxIter - 1;
-	  	
+
 	  	if (poss.length > 0){
 		  	shuffle(poss);
-		  	var n = name.replace(word,poss[0]);	
-		  	$('#out').html(n);  
+		  	var n = name.replace(word,poss[0]);
+		  	$('#out').html(n);
 		  	return;
 	  	}
-  	
+
   	}
 
-		  	
+
 
 }
 
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
